@@ -1,0 +1,4 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=8
+
+Puts a smiley on your status line. Nose will rotate on <Left> and <Right>
+Will frown on errors and warnings
