@@ -1,9 +1,9 @@
 " Description: VimBuddy statusline character
 " Author:      Flemming Madsen <fma@cci.dk>
 " Modified:    June 2001
-" Version:     0.9
+" Version:     0.9.1
 "
-" Usage:       Insert {VimBuddy()} into your 'statusline'
+" Usage:       Insert %{VimBuddy()} into your 'statusline'
 "
 
 function! VimBuddy()
@@ -21,7 +21,7 @@ function! VimBuddy()
         let g:vimbuddy:onemore = ""
     endif
 
-    if g:actual_curbuf != bufnr("%")
+    if ( exists("g:actual_curbuf") && (g:actual_curbuf != bufnr("%")))
         " Not my buffer, sleeping
         return "|-o"
     elseif g:vimbuddy:err != v:errmsg
