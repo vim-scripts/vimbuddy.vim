@@ -20,7 +20,7 @@ function! VimBuddy()
         let s:vimbuddy_onemore = ""
     endif
 
-    if g:actual_curbuf != bufnr("%")
+    if exists("g:actual_curbuf") && (g:actual_curbuf != bufnr("%"))
         " Not my buffer, sleeping
         return "|-o"
     elseif s:vimbuddy_err != v:errmsg
